@@ -1,0 +1,1124 @@
+/**
+------------------------
+Project Name: Calermont
+Author: It devloper21
+Author URI: https://itdevloper21.com/
+Description: Calermont
+Version: 1.0
+------------------------**/
+/*          Font - Georgia
+-----------------------------------*/
+@font-face {
+  font-family: "Georgia";
+  src: url("../fonts/Georgia/Georgia.eot");
+  src: url("../fonts/Georgia/Georgia.eot?#iefix") format("embedded-opentype"), url("../fonts/Georgia/Georgia.woff") format("woff"), url("../fonts/Georgia/Georgia.ttf") format("truetype"), url("../fonts/Georgia/Georgia.svg#Georgia") format("svg");
+}
+
+/*          Font - Georgia
+-----------------------------------*/
+@font-face {
+  font-family: "BigCity Grotesque Pro";
+  src: url("../fonts/BigCityGrotesquePro/BigCityGrotesquePro.eot");
+  src: url("../fonts/BigCityGrotesquePro/BigCityGrotesquePro.eot?#iefix") format("embedded-opentype"), url("../fonts/BigCityGrotesquePro/BigCityGrotesquePro.woff") format("woff"), url("../fonts/BigCityGrotesquePro/BigCityGrotesquePro.ttf") format("truetype"), url("../fonts/BigCityGrotesquePro/BigCityGrotesquePro.svg#BigCity Grotesque Pro") format("svg");
+}
+
+body {
+  font-family: BigCity Grotesque Pro, "Sans Serif";
+  color: #20342D;
+  background-color: #E0E1E5;
+  font-size: 1rem;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
+* {
+  font-family: BigCity Grotesque Pro, "Sans Serif";
+}
+
+:focus {
+  outline-color: #314F40;
+}
+
+*,
+::after,
+::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  font-family: Georgia, "Sans Serif";
+  font-weight: 300;
+}
+
+h1,
+.h1 {
+  font-size: 2.5rem;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+}
+
+h2,
+.h2 {
+  font-size: 2rem;
+  margin-top: 0.83em;
+  margin-bottom: 0.83em;
+}
+
+h3,
+.h3 {
+  font-size: 1.75rem;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+h4,
+.h4 {
+  font-size: 1.5rem;
+  margin-top: 1.33em;
+  margin-bottom: 1.33em;
+}
+
+h5,
+.h5 {
+  font-size: 1.25rem;
+  margin-top: 1.67em;
+  margin-bottom: 1.67em;
+}
+
+h6,
+.h6 {
+  font-size: 1rem;
+  margin-top: 2.33em;
+  margin-bottom: 2.33em;
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.first-letter {
+  font-size: 200%;
+  float: left;
+  margin-right: 10px;
+}
+
+.first-letter--lg {
+  font-size: 300%;
+  margin-top: 12px;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.d-none {
+  display: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+img.img-full {
+  width: 100%;
+}
+
+a,
+button,
+.cursor-pointer {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+a {
+  color: #314F40;
+}
+
+a:hover {
+  color: #96694C;
+}
+
+/*    Text Color
+-----------------------------------*/
+.text-primary {
+  color: #314F40;
+}
+
+.text-secondary {
+  color: #20342D;
+}
+
+.text-white {
+  color: #fff;
+}
+
+/*    Text Transform
+-----------------------------------*/
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+/*    Text Alignment
+-----------------------------------*/
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.align-items-start {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.align-items-end {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.align-items-center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.justify-content-center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/*    Font Style
+-----------------------------------*/
+.font-title {
+  font-family: Georgia, "Sans Serif";
+  font-weight: 300;
+}
+
+/*      Button Style
+---------------------------------- */
+.btn {
+  background-color: #314F40;
+  font-size: 1.5rem;
+  font-family: Georgia, "Sans Serif";
+  font-weight: 300;
+  letter-spacing: 3px;
+  color: #fff;
+  border: none;
+  -webkit-box-shadow: inset 0px 0px 0px 8px #587064;
+          box-shadow: inset 0px 0px 0px 8px #587064;
+  padding: 20px 35px;
+  text-decoration: none;
+  display: initial;
+  text-align: center;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.btn:hover {
+  color: #fff;
+}
+
+.btn-secondary {
+  color: #314F40;
+  background-color: transparent;
+  border-color: #314F40;
+}
+
+/*          Register Button Fixed
+---------------------------------------*/
+.btn-register--fixed {
+  position: fixed;
+  top: 30px;
+  right: 20px;
+  z-index: 1023;
+}
+
+@media screen and (max-width: 767px) {
+  .btn-register--fixed {
+    top: 100px;
+    right: 20px;
+  }
+}
+
+/*          Margin 
+--------------------------------*/
+.mt-50 {
+  margin-top: 50px;
+}
+
+/*          Padding 
+--------------------------------*/
+.pt-50 {
+  padding-top: 50px;
+}
+
+.pt-5 {
+  padding-top: 5%;
+}
+
+.pt-6 {
+  padding-top: 6%;
+}
+
+.pt-7 {
+  padding-top: 7%;
+}
+
+.pt-8 {
+  padding-top: 8%;
+}
+
+.pt-9 {
+  padding-top: 9%;
+}
+
+.pt-10 {
+  padding-top: 10%;
+}
+
+/*          Form Group
+-----------------------------------*/
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  font-family: Georgia, "Sans Serif";
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.form-group input {
+  height: 60px;
+}
+
+.form-group .form-control {
+  display: block;
+  width: 100%;
+  padding: 5px 15px;
+  font-size: 1.2rem;
+  color: #314F40;
+  border: 1px solid #20342D;
+  border-radius: 0;
+  font-weight: 400;
+}
+
+.form-group .form-control:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: none;
+  border-color: 1px solid #314F40;
+}
+
+/*          Custom Form Control
+----------------------------------------*/
+.custom-control {
+  position: relative;
+  display: block;
+  min-height: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.custom-control .custom-control-input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.custom-control .custom-control-label {
+  margin-bottom: 0;
+  display: inline-block;
+  padding-top: 4px;
+  font-size: 14px;
+}
+
+.custom-control .custom-control-label:before {
+  position: absolute;
+  top: .25rem;
+  left: 0;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  pointer-events: none;
+  content: "";
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid #20342D;
+}
+
+.custom-control .custom-control-label:after {
+  position: absolute;
+  top: .25rem;
+  left: 0;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  content: "";
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+
+.custom-control .custom-control-input:checked ~ .custom-control-label::before {
+  background-color: #20342D;
+}
+
+/*         Placeholder Block
+-----------------------------------------*/
+::-webkit-input-placeholder {
+  font-style: italic;
+  color: #20342D;
+  font-weight: 400;
+}
+
+:-moz-placeholder {
+  font-style: italic;
+  color: #20342D;
+  font-weight: 400;
+}
+
+::-moz-placeholder {
+  font-style: italic;
+  color: #20342D;
+  font-weight: 400;
+}
+
+:-ms-input-placeholder {
+  font-style: italic;
+  color: #20342D;
+  font-weight: 400;
+}
+
+/*          SideBar
+-----------------------------------*/
+.sidebar {
+  height: 100%;
+  width: 0px;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  background-color: #314F40;
+  text-align: center;
+  -webkit-transition: width .5s ease !important;
+  transition: width .5s ease !important;
+  overflow: visible;
+}
+
+.sidebar-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+  border-right: 1px solid rgba(255, 255, 255, 0.4);
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.sidebar__inner {
+  width: 100%;
+}
+
+.sidebar a:not(.scroll-top) {
+  padding: 8px 15px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  text-transform: lowercase;
+  color: #96694C;
+  display: block;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  font-style: italic;
+}
+
+.sidebar a:not(.scroll-top):hover, .sidebar a:not(.scroll-top).active {
+  color: #fff;
+}
+
+.sidebar.open-menu {
+  width: 350px;
+  padding-left: 40px;
+}
+
+@media screen and (max-width: 767px) {
+  .sidebar.open-menu {
+    margin-left: 0px;
+  }
+  .sidebar.open-menu .sidebar__menu {
+    display: block !important;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .sidebar.open-menu {
+    width: calc(100% - 40px);
+  }
+}
+
+.sidebar.open-menu .sidebar__logo .logo {
+  display: block;
+  max-width: 275px;
+}
+
+.sidebar.open-menu .openbtn:not(.openbtn--close) {
+  background: #314F40;
+}
+
+.sidebar:not(.open-menu) .openbtn:not(.openbtn--close) svg {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  -webkit-filter: FlipH;
+          filter: FlipH;
+  -ms-filter: "FlipH";
+}
+
+/*          SideBar Logo
+-----------------------------------*/
+.sidebar__logo {
+  padding: 25px 0px;
+}
+
+.sidebar__logo .logo {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .sidebar__logo .logo {
+    display: block;
+    max-width: 180px;
+  }
+}
+
+/*          SideBar Toggle Menu Button
+------------------------------------------------*/
+.openbtn {
+  font-size: 1rem;
+  font-family: Georgia, "Sans Serif";
+  font-weight: 300;
+  letter-spacing: 1px;
+  cursor: pointer;
+  padding: 5px 15px;
+  background-color: transparent;
+  color: #fff;
+  display: block;
+  width: 100%;
+  border: none;
+  outline: none;
+  margin: 25px 0px;
+}
+
+.openbtn:not(.openbtn--close) {
+  position: absolute;
+  width: 40px;
+  height: 100%;
+  background: #96694C;
+  left: 100%;
+  top: 0px;
+  padding: 0px;
+  z-index: 1024;
+  margin: 0px;
+}
+
+#main {
+  -webkit-transition: padding .5s ease;
+  transition: padding .5s ease;
+  padding: 0px 0px 0px 40px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidebar a {
+    font-size: 18px;
+  }
+}
+
+/*          SideBar Scroll Top Button
+--------------------------------------------------*/
+.scroll-top {
+  position: fixed;
+  right: 0px;
+  bottom: 0px;
+  z-index: 10;
+}
+
+.scroll-top img {
+  width: 75px;
+}
+
+/*          Footer Block 
+----------------------------------------*/
+.footer {
+  background-color: #314F40;
+  padding: 100px 20px 50px 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+
+.footer:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(230, 230, 230, 0.62);
+  left: 0px;
+  top: 0px;
+  z-index: 1;
+}
+
+.footer > div {
+  z-index: 2;
+}
+
+@media screen and (max-width: 1199px) {
+  .footer {
+    padding: 100px 20px 50px 50px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer {
+    padding: 50px 20px 50px 50px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .footer {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.footer > div {
+  max-width: 25%;
+  padding: 0px 25px;
+}
+
+@media screen and (max-width: 767px) {
+  .footer > div {
+    padding: 0px 25px;
+    max-width: 100%;
+    text-align: left !important;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .footer > div {
+    padding: 0px 25px;
+    max-width: 100%;
+    text-align: left !important;
+    margin-bottom: 20px;
+  }
+}
+
+.footer__menu a {
+  letter-spacing: normal;
+  display: block;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.footer__menu a:not(:last-child) {
+  padding-bottom: 15px;
+  margin-bottom: 8px;
+}
+
+.footer__menu a:hover, .footer__menu a.active {
+  color: #96694C;
+}
+
+.footer__desc {
+  letter-spacing: normal;
+  font-size: 12px;
+  font-family: BigCity Grotesque Pro, "Sans Serif";
+}
+
+.footer__title {
+  margin-bottom: 24px;
+  font-size: 1rem;
+  letter-spacing: normal;
+}
+
+.footer__contact-info {
+  font-size: 12px;
+}
+
+.footer__contact-info hr {
+  margin: 25px 0;
+  border-color: #314F40;
+  width: 100px;
+}
+
+.footer__contact-info .span, .footer__contact-info a {
+  letter-spacing: normal;
+  display: block;
+  margin-bottom: 5px;
+  font-family: BigCity Grotesque Pro, "Sans Serif";
+}
+
+.footer__contact-info .contact-info__title {
+  font-weight: 400;
+  font-size: 1rem;
+  margin-bottom: 24px;
+}
+
+.footer__offered .font-title {
+  margin-bottom: 15px;
+  letter-spacing: normal;
+}
+
+.footer__offered .img-fluid {
+  max-width: 200px;
+  display: block;
+}
+
+.footer__offered .img-fluid:last-child {
+  max-width: 100px;
+}
+
+.footer__logo img {
+  max-width: 120px;
+}
+
+/*          Common - Border Box 
+-----------------------------------------*/
+.uc-claremont-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .uc-claremont-box {
+    background: url("../img/claremont_round.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 700px;
+    height: 700px;
+  }
+}
+
+.uc-claremont-box__inner {
+  max-width: 390px;
+}
+
+.uc-claremont-box__inner p {
+  font-size: 90%;
+  line-height: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .uc-claremont-box__inner {
+    padding: 0px 35px;
+  }
+}
+
+/*          uc-scroll 
+----------------------------------------------------------*/
+.uc-scroll {
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  right: 0;
+  background: none;
+  margin: 0 auto;
+  width: 100px;
+}
+
+/*          Claremont Cover Block 
+----------------------------------------*/
+.uc-claremont-bg {
+  background-image: url("../img/calermont-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.uc-claremont-cover {
+  position: relative;
+}
+
+.uc-claremont-cover .intro {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.uc-claremont-cover .claremont__logo {
+  max-width: 25%;
+}
+
+/*          Claremont About Block 
+----------------------------------------*/
+.uc-claremont-about {
+  position: relative;
+}
+
+.uc-claremont-about__inner {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+/*          Me Register Block
+------------------------------------------*/
+.uc-claremont-register {
+  padding: 50px 0px;
+}
+
+.uc-claremont-register .row {
+  margin: 0px -15px;
+}
+
+.uc-claremont-register .row .col-lg-6,
+.uc-claremont-register .row .col-lg-12 {
+  padding: 0px 15px;
+}
+
+.uc-claremont-register .row .col-lg-6 {
+  width: 50%;
+  float: left;
+}
+
+@media screen and (max-width: 767px) {
+  .uc-claremont-register .row .col-lg-6 {
+    width: 100%;
+  }
+}
+
+.uc-claremont-register__inner {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 991px) {
+  .uc-claremont-register__inner {
+    padding: 0px 35px;
+  }
+}
+
+.uc-claremont-register__title {
+  font-size: 700%;
+  margin-top: 0px;
+}
+
+@media screen and (max-width: 767px) {
+  .uc-claremont-register__title {
+    font-size: 400%;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .uc-claremont-register__title {
+    font-size: 200%;
+  }
+}
+
+/*       Gallery  Block 
+-----------------------------------------*/
+.uc-claremont-gallery {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.uc-claremont-gallery__title {
+  max-width: 800px;
+  margin: 0px auto -160px auto;
+  position: relative;
+  z-index: 9;
+}
+
+@media screen and (max-width: 1199px) {
+  .uc-claremont-gallery__title {
+    max-width: 600px;
+    margin: 0px auto -130px auto;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .uc-claremont-gallery__title {
+    max-width: 320px;
+    margin: 0px auto -92px auto;
+  }
+}
+
+@media screen and (max-width: 374px) {
+  .uc-claremont-gallery__title {
+    max-width: 280px;
+    margin: 0px auto -85px auto;
+  }
+}
+
+.gallery-slider {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gallery-slider .slide-item {
+  padding: 40px 62px 50px 96px;
+  line-height: 0px;
+}
+
+@media screen and (max-width: 1199px) {
+  .gallery-slider {
+    max-width: 800px;
+  }
+  .gallery-slider .slide-item {
+    padding: 40px 45px 50px 70px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .gallery-slider {
+    max-width: 100%;
+  }
+  .gallery-slider .slide-item {
+    padding: 40px 35px;
+  }
+}
+
+.gallery-slider .slick-slide:focus {
+  outline: none;
+}
+
+.gallery-slider .slick-arrow {
+  border: none;
+  padding: 0px;
+  line-height: 0px;
+  position: absolute;
+  left: 100%;
+  bottom: 54px;
+  width: 50px;
+}
+
+.gallery-slider .slick-arrow:focus {
+  outline: none;
+}
+
+.gallery-slider .slick-arrow.slick-prev {
+  bottom: 125px;
+}
+
+@media screen and (max-width: 991px) {
+  .gallery-slider .slick-arrow {
+    bottom: auto;
+    top: 100%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    margin-left: 50px;
+    margin-top: -25px;
+  }
+  .gallery-slider .slick-arrow.slick-prev {
+    bottom: auto;
+    top: 100%;
+    left: 50%;
+    margin-left: -25px;
+  }
+}
+
+/*       Me  Feature  Block 
+-----------------------------------------*/
+.uc-claremont-neighbourhood {
+  background: #314F40;
+  position: relative;
+  padding-top: 50px;
+}
+
+.uc-claremont-neighbourhood:before {
+  content: '';
+  width: 100%;
+  height: 50px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  background: #314F40;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#314F40));
+  background-image: linear-gradient(#fff, #314F40);
+}
+
+.uc-claremont-neighbourhood__inner {
+  padding-left: 50px;
+}
+
+@media screen and (max-width: 991px) {
+  .uc-claremont-neighbourhood__inner {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+}
+
+.uc-claremont-neighbourhood__title h2 {
+  color: #c9c3ba;
+}
+
+@media screen and (max-width: 575px) {
+  .uc-claremont-neighbourhood__title h2 {
+    font-size: 1.4rem;
+  }
+}
+
+.uc-claremont-neighbourhood__detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media screen and (min-width: 992px) {
+  .uc-claremont-neighbourhood__detail {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.uc-claremont-neighbourhood__detail .detail__left {
+  width: 100%;
+  padding: 50px 0px;
+}
+
+@media screen and (min-width: 992px) {
+  .uc-claremont-neighbourhood__detail .detail__left {
+    width: 500px;
+  }
+}
+
+.uc-claremont-neighbourhood__detail .detail__right {
+  line-height: 0px;
+}
+
+@media screen and (min-width: 992px) {
+  .uc-claremont-neighbourhood__detail .detail__right {
+    width: calc(100% - 500px);
+  }
+}
+
+.uc-claremont-neighbourhood__desc p {
+  font-size: 14px;
+  color: #c9c3ba;
+}
+
+.uc-claremont-neighbourhood .location-list {
+  width: 50%;
+  list-style-type: none;
+  padding-left: 0px;
+  padding-right: 15px;
+  min-height: 150px;
+  float: left;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 767px) {
+  .uc-claremont-neighbourhood .location-list {
+    width: 100%;
+    min-height: auto;
+  }
+}
+
+.uc-claremont-neighbourhood .location-heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: uppercase;
+  color: #c9c3ba;
+  font-family: Georgia, "Sans Serif";
+  margin-bottom: 15px;
+  font-size: 13px;
+}
+
+.uc-claremont-neighbourhood .location-item {
+  font-size: 80%;
+  margin-bottom: 3px;
+  color: #c9c3ba;
+}
