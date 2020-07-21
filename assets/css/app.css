@@ -502,7 +502,7 @@ a:hover {
 
 .sidebar.open-menu .sidebar__logo .logo {
   display: block;
-  max-width: 275px;
+  max-width: 600px;
 }
 
 .sidebar.open-menu .openbtn:not(.openbtn--close) {
