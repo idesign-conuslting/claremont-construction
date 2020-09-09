@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="assets/vendor/scrollbar/jquery.scrollbar.css" />
   <!-- Stylesheet -->
   <!-- build:css -->
+  <link rel="stylesheet" href="https://use.typekit.net/key1fjp.css" />
   <link rel="stylesheet" href="assets/css/app.css" />
   <!-- endbuild -->
 </head>
@@ -22,13 +23,13 @@
 <body>
 
   <!-- Scroll Top -->
-  <a href="javascipt:void(0);" class="scroll-top text-uppercase">
+  <!-- <a href="javascript:void(0);" class="scroll-top text-uppercase">
     <img src="assets/img/scroll_icon.png" alt="" />
-  </a>
+  </a> -->
 
   <!-- Menu with Sidebar -->
   <div id="mySidebar" class="sidebar">
-    <button type="button" class="openbtn text-uppercase" onclick="openNav()">
+    <button type="button" class="openbtn text-uppercase" onclick="openNav(this)">
       <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 172 172">
         <g fill="#E6E0D2">
           <path d="M116.96,17.2l-75.68,72.24l75.68,72.24z"></path>
@@ -38,17 +39,18 @@
     <div class="sidebar-inner">
       <div class="sidebar__logo">
         <a href="index.html">
-          <img class="logo" src="assets/img/Claremont Logo_Final-01.png" alt="" />
+          <img class="logo" src="assets/img/claremont_logo_white.svg" alt="" />
         </a>
       </div>
       <div class="sidebar__inner">
         <div class="sidebar__menu" style="display: none;">
-          <a href="#main" onclick="openNav()">Home</a>
-          <a href="#uc-claremont-gallery" onclick="openNav()">Neighbours</a>
-          <a href="#uc-claremont-neighbourhood" onclick="openNav()">Location Map</a>
-          <a href="#uc-claremont-register" onclick="openNav()">Register</a>
-          <button type="button" class="openbtn openbtn--close text-uppercase" onclick="openNav()">
-            <img width="45" src="assets/img/menu_close.png" alt=""/>
+          <a href="javascript:void(0);" data-id="#main" onclick="openNav(this)">Home</a>
+          <a href="javascript:void(0);" data-id="#uc-claremont-gallery" onclick="openNav(this)">Gallery</a>
+          <a href="javascript:void(0);" data-id="#uc-claremont-neighbours" onclick="openNav(this)">Neighbours</a>
+          <a href="javascript:void(0);" data-id="#uc-claremont-location" onclick="openNav(this)">Location Map</a>
+          <a href="javascript:void(0);" data-id="#uc-claremont-register" onclick="openNav(this)">Register</a>
+          <button type="button" class="openbtn openbtn--close text-uppercase" onclick="openNav(this)">
+            <img width="45" src="assets/img/menu_close.png" alt="" />
           </button>
         </div>
       </div>
@@ -60,16 +62,17 @@
   <main id="main">
 
     <!-- Claremont - Fixed Register Button -->
-    <a href="javascrit:void(0);" data-target="uc-claremont-register" class="btn btn-register--fixed text-uppercase">Register</a>
+    <a href="javascrit:void(0);" data-target="uc-claremont-register"
+      class="btn btn-register--fixed text-uppercase">Register</a>
     <!-- # End -->
 
     <!-- Claremont - Cover Block -->
     <div class="section uc-claremont-bg uc-claremont-cover" id="uc-claremont-cover">
       <div class="intro justify-content-center align-items-center">
-        <img class="claremont__logo" src="assets/img/Claremont Logo_Final-02.png" alt="" />
+        <img class="claremont__logo" src="assets/img/claremont_logo_gold.svg" alt="" />
       </div>
       <a href="javascript:void(0);" data-target="uc-claremont-about" class="uc-scroll scroll text-uppercase">
-        <img class="img-fluid" src="assets/img/claremont_scroll_icon.png" alt="" />
+        <img class="img-fluid" src="assets/img/claremont_scroll_icon.svg" alt="" />
       </a>
     </div>
     <!-- # End -->
@@ -80,14 +83,10 @@
         <div class="uc-claremont-box">
           <div class="uc-claremont-box__inner">
             <p>
-              Inspired by 17th century French design, these
-              contemporary and modern homes were built with
-              functionality, privacy, and luxury in mind. Residents of
-              this close-knit community can gather in the communal
-              courtyard while still having individual entrances and
-              private front and back yards. Experience intimate
-              high-end living with your family in the heart of
-              Vancouver’s Westside.
+              Inspired by 17th century French design, these contemporary and modern homes were built with functionality,
+              privacy, and luxury in mind. Residents of this close-knit community can gather in the communal courtyard
+              while still having individual entrances and private front and back yards. Experience intimate high-end
+              living with your family in the heart of Vancouver’s Westside.
             </p>
           </div>
         </div>
@@ -98,8 +97,9 @@
     <!-- Claremont - Gallery Block -->
     <div class="section uc-claremont-bg uc-claremont-gallery" id="uc-claremont-gallery">
       <div class="uc-claremont-gallery__inner">
-        <div class="text-center uc-claremont-gallery__title">
-          <img src="assets/img/claremont_gallery.png" alt="" />
+        <div class="h1 text-center text-uppercase text-primary uc-claremont-gallery__title">
+          <!-- <img src="assets/img/claremont_gallery.png" alt="" /> -->
+          <h2>Gallery</h2>
         </div>
         <div class="gallery-slider" id="uc-claremont-slider">
           <div class="slide-item">
@@ -131,58 +131,62 @@
     </div>
     <!-- # End -->
 
+    <!-- Claremont - About Block -->
+    <div class="section uc-claremont-bg uc-claremont-neighbours" id="uc-claremont-neighbours">
+      <div class="h1 text-center text-uppercase text-primary uc-claremont-neighbours__title">
+        <h3>Neighbours</h3>
+      </div>
+      <div class="uc-claremont-neighbours__inner align-items-center justify-content-center">
+        <div class="uc-claremont-box">
+          <div class="uc-claremont-box__inner">
+            <p>
+              Claremont is conveniently located in Vancouver’s coveted Westside, which is home to the City’s top schools
+              and sprawling community green spaces. Discover the delights of Kerrisdale Village, where you can shop and
+              explore a wide variety of retailers, eateries, and cafes.
+            </p>
+            <p>
+              With in a short drive find yourself in Downtown Vancouver, which is the epicentre of business and flagship
+              retail.
+            </p>
+            <p>
+              Claremont is also positioned for easy access to the City of Richmond, including all of its countless
+              international amenities and the YVR airport.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- # End -->
+
     <!-- Claremont - Neighbourhood Block -->
-    <div class="section uc-claremont-neighbourhood" id="uc-claremont-neighbourhood">
-      <div class="uc-claremont-neighbourhood__inner">
-        <div class="uc-claremont-neighbourhood__detail">
+    <div class="section uc-claremont-location" id="uc-claremont-location">
+      <div class="uc-claremont-location__inner">
+        <div class="uc-claremont-location__detail">
           <div class="detail__left">
-            <div class="uc-claremont-neighbourhood__title">
-              <h2 class="text-uppercase">
-                Neighbourhood <br/>Amenities
-              </h2>
-            </div>
-            <hr style="margin:30px 0px; max-width:120px"/>
-            <div class="uc-claremont-neighbourhood__desc">
-              <p>
-                Claremont is conveniently located in Vancouver’s coveted Westside,
-                which is home to the City’s top schools and sprawling community green
-                spaces. Discover the delights of Kerrisdale Village, where you can shop
-                and explore awide variety of retailers, eateries, and cafes.
-              </p>
-              <p>
-                With in a short drive find yourself in Downtown Vancouver, Which is the
-                epicentre of business and flagship retail.
-              </p>
-              <p>
-                Claremont is also positioned for easy access to the City of Richmond,
-                including all of its countless international amenities and the YVR airport
-              </p>
-            </div>
-            <hr style="margin:50px 0px"/>
             <div class="locations">
               <ul class="location-list">
-                <li class="location-heading text-uppercase">Schools</li>
+                <li class="location-heading location-heading--schools text-uppercase">Schools</li>
                 <li class="location-item">01. Sir Winston Churchill (Secondary)</li>
                 <li class="location-item">02. Sir William Osler Elementary School</li>
                 <li class="location-item">03. Langara College</li>
                 <li class="location-item">04. Vancouver College</li>
               </ul>
               <ul class="location-list">
-                <li class="location-heading text-uppercase">Amenities</li>
+                <li class="location-heading location-heading--aminities text-uppercase">Amenities</li>
                 <li class="location-item">06. Oakridge</li>
                 <li class="location-item">07. Kerrisdale</li>
                 <li class="location-item">08. Choices</li>
                 <li class="location-item">09. Pharmasave in Shannon Wall Centre</li>
               </ul>
               <ul class="location-list">
-                <li class="location-heading text-uppercase">Parks</li>
+                <li class="location-heading location-heading--parks text-uppercase">Parks</li>
                 <li class="location-item">10. Marpole Park</li>
                 <li class="location-item">11. Vandusen Gardens</li>
                 <li class="location-item">12. Queen Eliza Park</li>
                 <li class="location-item">13. Shannon Wall Centre</li>
               </ul>
               <ul class="location-list">
-                <li class="location-heading text-uppercase">Restaurants</li>
+                <li class="location-heading location-heading--restaurents text-uppercase">Restaurants</li>
                 <li class="location-item">14. Seasons by the Park</li>
                 <li class="location-item">15. Sushi Bar Shu</li>
                 <li class="location-item">16. Redstar Restaurant</li>
@@ -192,7 +196,7 @@
             </div>
           </div>
           <div class="detail__right">
-            <img class="me-locations-map" src="assets/img/location_map.png" alt="" />
+            <img class="me-locations-map" src="assets/img/location_map.svg" alt="" />
           </div>
         </div>
       </div>
@@ -202,7 +206,9 @@
     <!-- Claremont - Register Block -->
     <div class="section uc-claremont-bg uc-claremont-register" id="uc-claremont-register">
       <div class="uc-claremont-register__inner">
-        <div class="h1 text-center uc-claremont-register__title text-primary text-uppercase">Register</div>
+        <div class="h1 text-center uc-claremont-register__title text-primary text-uppercase">
+          <h3>Register</h3>
+        </div>
         <form action="#" method="post" autocomplete="off">
           <div class="row">
             <div class="col-lg-6">
@@ -226,8 +232,8 @@
                   autocomplete="off"></textarea>
               </div>
             </div>
-            <div class="col-lg-12">
-              <button type="submit" class="btn btn-block text-uppercase btn-register">
+            <div class="col-lg-12 text-center">
+              <button type="submit" class="btn text-uppercase btn-register">
                 Submit
               </button>
             </div>
@@ -244,10 +250,10 @@
   <!-- Calermont - Footer -->
   <footer class="footer uc-claremont-bg">
     <div class="footer__menu">
-      <a href="index.html" class="font-title text-uppercase">Home</a>
-      <a href="location.html" class="font-title text-uppercase">Neighbours</a>
-      <a href="homes.html" class="font-title text-uppercase">Location Map</a>
-      <a href="register.html" class="font-title text-uppercase">Register</a>
+      <a href="javascript:void(0);" data-target="main" class="font-title text-uppercase">Home</a>
+      <a href="javascript:void(0);" data-target="uc-claremont-neighbours" class="font-title text-uppercase">Neighbours</a>
+      <a href="javascript:void(0);" data-target="uc-claremont-location" class="font-title text-uppercase">Location Map</a>
+      <a href="javascript:void(0);" data-target="uc-claremont-register" class="font-title text-uppercase">Register</a>
     </div>
     <div class="footer__contact-info">
       <div>

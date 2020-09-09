@@ -14,18 +14,10 @@ Version: 1.0
   src: url("../fonts/Georgia/Georgia.eot?#iefix") format("embedded-opentype"), url("../fonts/Georgia/Georgia.woff") format("woff"), url("../fonts/Georgia/Georgia.ttf") format("truetype"), url("../fonts/Georgia/Georgia.svg#Georgia") format("svg");
 }
 
-/*          Font - Georgia
------------------------------------*/
-@font-face {
-  font-family: "BigCity Grotesque Pro";
-  src: url("../fonts/BigCityGrotesquePro/BigCityGrotesquePro.eot");
-  src: url("../fonts/BigCityGrotesquePro/BigCityGrotesquePro.eot?#iefix") format("embedded-opentype"), url("../fonts/BigCityGrotesquePro/BigCityGrotesquePro.woff") format("woff"), url("../fonts/BigCityGrotesquePro/BigCityGrotesquePro.ttf") format("truetype"), url("../fonts/BigCityGrotesquePro/BigCityGrotesquePro.svg#BigCity Grotesque Pro") format("svg");
-}
-
 body {
   background-image: url(../img/fullpage_background.jpg) ;
-  font-family: bigcity-grotesque-pro, sans-serif;
-  color: #314F40;
+  font-family: 'bigcity-grotesque-pro', Sans Serif;
+  color: #504B4B;
   background-color: #E0E1E5;
   font-size: 1rem;
   margin: 0px;
@@ -33,15 +25,14 @@ body {
   overflow-x: hidden;
   font-style: normal;
   font-weight: 400;
-  font-color: #314F40;
 }
 
 * {
-  font-family: BigCity Grotesque Pro, "Sans Serif";
+  font-family: 'bigcity-grotesque-pro', Sans Serif;
 }
 
 :focus {
-  outline-color: #314F40;
+  outline-color: #504B4B;
 }
 
 *,
@@ -160,11 +151,11 @@ a:hover {
 /*    Text Color
 -----------------------------------*/
 .text-primary {
-  color: #314F40;
+  color: #D7A755;
 }
 
 .text-secondary {
-  color: #20342D;
+  color: #504B4B;
 }
 
 .text-white {
@@ -225,19 +216,27 @@ a:hover {
 /*      Button Style
 ---------------------------------- */
 .btn {
-  background-color: #314F40;
+  background-color:#504B4B;
   font-size: 1.5rem;
-  font-family: Georgia, "Sans Serif";
+  font-family:  'bigcity-grotesque-pro', Sans Serif;
   font-weight: 300;
   letter-spacing: 3px;
-  color: #fff;
+  border-radius: 4px;
+  color: #D7A755;
   border: none;
-  -webkit-box-shadow: inset 0px 0px 0px 8px #587064;
-          box-shadow: inset 0px 0px 0px 8px #587064;
-  padding: 20px 35px;
+  -webkit-box-shadow: 0px 0px 5px 0px #D7A755;
+          box-shadow: 0px 0px 5px 0px #D7A755;
+  transition: all 0.5s ease;
+  padding: 10px 20px 5px 20px;
   text-decoration: none;
   display: initial;
   text-align: center;
+}
+.btn:hover{
+  background-color: #D7A755;
+  color: #504B4B;
+  -webkit-box-shadow: 0px 0px 5px 0px #504B4B;
+          box-shadow: 0px 0px 5px 0px #504B4B;
 }
 
 .btn-block {
@@ -331,14 +330,14 @@ a:hover {
   padding: 5px 15px;
   font-size: 1.2rem;
   color: #314F40;
-  border: 1px solid #20342D;
-  border-radius: 0;
+  border: 1px solid #d7a755;
+  border-radius: 4px;
   font-weight: 400;
+  box-shadow: 0px 0px 10px 0px rgba(215, 168, 86 , 0.57);
 }
 
 .form-group .form-control:focus {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: 0px 0px 10px 0px rgba(215, 168, 86 , 1);
   outline: none;
   border-color: 1px solid #314F40;
 }
@@ -403,25 +402,25 @@ a:hover {
 -----------------------------------------*/
 ::-webkit-input-placeholder {
   font-style: italic;
-  color: #20342D;
+  color: #504B4B;
   font-weight: 400;
 }
 
 :-moz-placeholder {
   font-style: italic;
-  color: #20342D;
+  color: #504B4B;
   font-weight: 400;
 }
 
 ::-moz-placeholder {
   font-style: italic;
-  color: #20342D;
+  color: #504B4B;
   font-weight: 400;
 }
 
 :-ms-input-placeholder {
   font-style: italic;
-  color: #20342D;
+  color: #504B4B;
   font-weight: 400;
 }
 
@@ -434,7 +433,7 @@ a:hover {
   z-index: 10;
   top: 0;
   left: 0;
-  background-color: #314F40;
+  background-color: #D7A755;
   text-align: center;
   -webkit-transition: width .5s ease !important;
   transition: width .5s ease !important;
@@ -470,7 +469,7 @@ a:hover {
   font-size: 1.2rem;
   letter-spacing: 1px;
   text-transform: lowercase;
-  color: #96694C;
+  color: #504B4B;
   display: block;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -503,11 +502,11 @@ a:hover {
 
 .sidebar.open-menu .sidebar__logo .logo {
   display: block;
-  max-width: 600px;
+  width: 600px;
 }
 
 .sidebar.open-menu .openbtn:not(.openbtn--close) {
-  background: #314F40;
+  background: #D7A755;
 }
 
 .sidebar:not(.open-menu) .openbtn:not(.openbtn--close) svg {
@@ -557,12 +556,13 @@ a:hover {
   position: absolute;
   width: 40px;
   height: 100%;
-  background: #96694C;
+  background: #D7A755;
   left: 100%;
   top: 0px;
   padding: 0px;
   z-index: 1024;
-  margin: 0px;
+  margin: 0px;  
+  box-shadow: 8px 0px 10px 0px rgba(0, 0, 0, 0.18);
 }
 
 #main {
@@ -593,7 +593,7 @@ a:hover {
 /*          Footer Block 
 ----------------------------------------*/
 .footer {
-  background-color: #314F40;
+  background-color: #504B4B;
   padding: 100px 20px 50px 120px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -612,7 +612,7 @@ a:hover {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: rgba(230, 230, 230, 0.62);
+  background:transparent;
   left: 0px;
   top: 0px;
   z-index: 1;
@@ -653,6 +653,7 @@ a:hover {
 .footer > div {
   max-width: 25%;
   padding: 0px 25px;
+  color: #c3c3c3;
 }
 
 @media screen and (max-width: 767px) {
@@ -678,6 +679,7 @@ a:hover {
   display: block;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  color: #c3c3c3;
 }
 
 .footer__menu a:not(:last-child) {
@@ -686,13 +688,13 @@ a:hover {
 }
 
 .footer__menu a:hover, .footer__menu a.active {
-  color: #96694C;
+  color: #d7a755;
 }
 
 .footer__desc {
   letter-spacing: normal;
   font-size: 12px;
-  font-family: BigCity Grotesque Pro, "Sans Serif";
+  font-family:  'bigcity-grotesque-pro', Sans Serif;
 }
 
 .footer__title {
@@ -707,7 +709,7 @@ a:hover {
 
 .footer__contact-info hr {
   margin: 25px 0;
-  border-color: #314F40;
+  border-color: #c3c3c3;
   width: 100px;
 }
 
@@ -715,13 +717,19 @@ a:hover {
   letter-spacing: normal;
   display: block;
   margin-bottom: 5px;
-  font-family: BigCity Grotesque Pro, "Sans Serif";
+  font-family:  'bigcity-grotesque-pro', Sans Serif;
+  color: #c3c3c3;
+}
+
+.footer__contact-info a:hover{
+  color:#d7a755;
 }
 
 .footer__contact-info .contact-info__title {
   font-weight: 400;
   font-size: 1rem;
   margin-bottom: 24px;
+  color: #c3c3c3;
 }
 
 .footer__offered .font-title {
@@ -730,8 +738,8 @@ a:hover {
 }
 
 .footer__offered .img-fluid {
-  max-width: 200px;
   display: block;
+  max-height: 85px;
 }
 
 .footer__offered .img-fluid:last-child {
@@ -757,25 +765,18 @@ a:hover {
   text-align: center;
 }
 
-@media screen and (min-width: 768px) {
-  .uc-claremont-box {
-    background: url("../img/claremont_round.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 700px;
-    height: 700px;
-  }
+.uc-claremont-box {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background: #ffffff;
+  width: 100%;
+  padding: 120px 0px;
+  box-shadow: 0px 0px 30px 0px #d7a75569;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .uc-claremont-box {
-    background-color: white;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
-    border: 1px double #314F40;
-    border-radius: 10px 50px 10px;
+    padding: 60px 0px;
   }
 }
 
@@ -786,6 +787,7 @@ a:hover {
 .uc-claremont-box__inner p {
   font-size: 90%;
   line-height: 20px;
+  color: #d7a755;
 }
 
 @media screen and (max-width: 767px) {
@@ -858,8 +860,13 @@ a:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+          padding-left: 75px;
 }
-
+@media screen and (max-width: 991px) {
+  .uc-claremont-about__inner {
+    min-height: 50vh;
+  }
+}
 @media screen and (max-width: 767px) {
   .uc-claremont-about__inner {
     min-height: 50vh;
@@ -870,6 +877,7 @@ a:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+            padding-left: 30px;
   }
 }
 
@@ -879,6 +887,12 @@ a:hover {
 ------------------------------------------*/
 .uc-claremont-register {
   padding: 50px 0px;
+}
+
+.uc-claremont-register .btn{
+  min-width:200px;
+  margin-top:70px;
+  margin-bottom:70px;
 }
 
 .uc-claremont-register .row {
@@ -913,20 +927,19 @@ a:hover {
   }
 }
 
-.uc-claremont-register__title {
-  font-size: 700%;
+.uc-claremont-register__title h3 {
+  font-size: 120%;
   margin-top: 0px;
-}
-
-@media screen and (max-width: 767px) {
-  .uc-claremont-register__title {
-    font-size: 400%;
-  }
+  margin-bottom:50px;
+  letter-spacing: 8px;
 }
 
 @media screen and (max-width: 575px) {
-  .uc-claremont-register__title {
-    font-size: 200%;
+  .uc-claremont-register__title h3 {
+      font-size: 90%;
+      margin-top: 0px;
+      margin-bottom: 20px;
+      letter-spacing: 1px;
   }
 }
 
@@ -934,63 +947,97 @@ a:hover {
 -----------------------------------------*/
 .uc-claremont-gallery {
   padding-top: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 150px;
 }
 
 .uc-claremont-gallery__title {
-  max-width: 800px;
-  margin: 0px auto -160px auto;
+  /* max-width: 800px; */
+  /* margin: 0px auto -160px auto; */
+  margin-bottom:0px;
   position: relative;
   z-index: 9;
 }
-
+.uc-claremont-gallery__title h2{
+  font-size: 120%;
+  letter-spacing: 8px;
+  margin-top:0px;
+  margin-bottom: 50px;;
+}
+@media screen and (max-width: 575px) {
+  .uc-claremont-gallery__title h2 {
+    font-size: 90%;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+  }
+}
 @media screen and (max-width: 1199px) {
   .uc-claremont-gallery__title {
-    max-width: 600px;
-    margin: 0px auto -130px auto;
+    /* max-width: 600px; */
+    /* margin: 0px auto -130px auto; */
   }
 }
 
 @media screen and (max-width: 767px) {
   .uc-claremont-gallery__title {
-    max-width: 320px;
-    margin: 0px auto -92px auto;
+    /* max-width: 320px;
+    margin: 0px auto -92px auto; */
   }
 }
 
 @media screen and (max-width: 374px) {
   .uc-claremont-gallery__title {
-    max-width: 280px;
-    margin: 0px auto -85px auto;
+    /* max-width: 280px;
+    margin: 0px auto -85px auto; */
   }
 }
 
 .gallery-slider {
-  max-width: 1000px;
+  /* max-width: 1000px; */
   margin-left: auto;
   margin-right: auto;
 }
 
 .gallery-slider .slide-item {
-  padding: 40px 62px 50px 96px;
+  padding: 20px;
   line-height: 0px;
+  padding-top: 6%;
+  position: relative;
+  overflow: hidden;
+  margin: 40px;
+  box-shadow: 0px 0px 25px 0px rgba(215 ,167, 85, 0.55);
+}
+
+@media screen and (max-width: 767px) {
+  .gallery-slider .slide-item {
+    margin: 20px 40px;
+  }
+}
+
+.gallery-slider .slide-item  img{
+  position: absolute;
+  left:0px;
+  top:0px;
+  width:100%;
+  height:100%;
+  object-fit: cover;
 }
 
 @media screen and (max-width: 1199px) {
   .gallery-slider {
-    max-width: 800px;
+    /* max-width: 800px; */
   }
   .gallery-slider .slide-item {
-    padding: 40px 45px 50px 70px;
+    /* padding: 40px 45px 50px 70px; */
   }
 }
 
 @media screen and (max-width: 767px) {
   .gallery-slider {
-    max-width: 150%;
+    /* max-width: 150%; */
   }
   .gallery-slider .slide-item {
-    padding: 40px 35px;
+    /* padding: 40px 35px; */
   }
 }
 
@@ -1005,7 +1052,8 @@ a:hover {
   position: absolute;
   left: 100%;
   bottom: 54px;
-  width: 50px;
+  width: 80px;
+  background: transparent;
 }
 
 .gallery-slider .slick-arrow:focus {
@@ -1016,66 +1064,105 @@ a:hover {
   bottom: 125px;
 }
 
-@media screen and (max-width: 991px) {
+/* @media screen and (max-width: 991px) { */
   .gallery-slider .slick-arrow {
     bottom: auto;
     top: 100%;
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
-    margin-left: 50px;
-    margin-top: -25px;
+    margin-left: 60px;
+    margin-top: 50px;
   }
   .gallery-slider .slick-arrow.slick-prev {
     bottom: auto;
     top: 100%;
     left: 50%;
-    margin-left: -25px;
+    margin-left: -30px;
+    margin-top: 50px;
+  }
+/* } */
+
+
+/*          Claremont neighbours Block 
+----------------------------------------*/
+.uc-claremont-neighbours {
+  position: relative;
+  padding-top:50px;
+}
+
+.uc-claremont-neighbours__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+          padding-left: 75px;
+}
+.uc-claremont-neighbours__inner  .uc-claremont-box{
+  padding: 75px 0px;
+  margin-bottom: 75px;
+}
+@media screen and (max-width: 767px) {
+  .uc-claremont-neighbours__inner {
+    min-height: 50vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+            padding-left: 30px;
+  }
+}
+
+.uc-claremont-neighbours__title h3 {
+  font-size: 120%;
+  margin-top: 0px;
+  margin-bottom: 75px;
+  letter-spacing: 8px;
+}
+
+@media screen and (max-width: 575px) {
+  .uc-claremont-neighbours__title h3 {
+    font-size: 90%;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
   }
 }
 
 /*       Me  Feature  Block 
 -----------------------------------------*/
-.uc-claremont-neighbourhood {
-  background: #314F40;
+.uc-claremont-location {
   position: relative;
-  padding-top: 50px;
 }
 
-.uc-claremont-neighbourhood:before {
-  content: '';
-  width: 100%;
-  height: 50px;
-  left: 0px;
-  top: 0px;
-  position: absolute;
-  background: #314F40;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#314F40));
-  background-image: linear-gradient(#fff, #314F40);
-}
-
-.uc-claremont-neighbourhood__inner {
+/* .uc-claremont-location__inner {
   padding-left: 50px;
-}
+} */
 
-@media screen and (max-width: 991px) {
-  .uc-claremont-neighbourhood__inner {
+/* @media screen and (max-width: 991px) {
+  .uc-claremont-location__inner {
     padding-left: 35px;
     padding-right: 35px;
   }
-}
+} */
 
-.uc-claremont-neighbourhood__title h2 {
+.uc-claremont-location__title h2 {
   color: #c9c3ba;
 }
 
 @media screen and (max-width: 575px) {
-  .uc-claremont-neighbourhood__title h2 {
+  .uc-claremont-location__title h2 {
     font-size: 1.4rem;
   }
 }
 
-.uc-claremont-neighbourhood__detail {
+.uc-claremont-location__detail {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1089,61 +1176,76 @@ a:hover {
 }
 
 @media screen and (min-width: 992px) {
-  .uc-claremont-neighbourhood__detail {
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+  .uc-claremont-location__detail {
+    flex-direction: row-reverse;
+
   }
 }
 
-.uc-claremont-neighbourhood__detail .detail__left {
+.uc-claremont-location__detail .detail__right img{
+  width: calc(100% + 10%);
+  max-width: calc(100% + 10%);
+  margin-left: -6%;
+}
+
+.uc-claremont-location__detail .detail__left {
   width: 100%;
-  padding: 50px 0px;
+  padding: 50px 30px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media screen and (min-width: 992px) {
-  .uc-claremont-neighbourhood__detail .detail__left {
-    width: 500px;
+  .uc-claremont-location__detail .detail__left {
+    width: 40%;
+    box-shadow: -16px 0px 40px 0px rgba(215, 167, 85, 0.22);
+    z-index: 2;
   }
 }
 
-.uc-claremont-neighbourhood__detail .detail__right {
+.uc-claremont-location__detail .detail__right {
   line-height: 0px;
+  overflow: hidden;
 }
 
 @media screen and (min-width: 992px) {
-  .uc-claremont-neighbourhood__detail .detail__right {
-    width: calc(100% - 500px);
+  .uc-claremont-location__detail .detail__right {
+    width: calc(100% - 40%);
   }
 }
 
-.uc-claremont-neighbourhood__desc p {
+.uc-claremont-location__desc p {
   font-size: 14px;
   color: #c9c3ba;
 }
 
-.uc-claremont-neighbourhood .location-list {
-  width: 50%;
+.uc-claremont-location .location-list {
   list-style-type: none;
   padding-left: 0px;
-  padding-right: 15px;
   min-height: 150px;
-  float: left;
-  margin-bottom: 10px;
+  margin: 0px;
 }
 
+@media screen and (max-width: 991px) {
+  .uc-claremont-location .location-list {
+    list-style-type: none;
+    min-height: 150px;
+    margin: 0px;
+    float: left;
+    width: 50%;
+    padding-left: 15px;
+  }
+}
 @media screen and (max-width: 767px) {
-  .uc-claremont-neighbourhood .location-list {
+  .uc-claremont-location .location-list {
     width: 100%;
     min-height: auto;
   }
 }
 
-.uc-claremont-neighbourhood .location-heading {
+.uc-claremont-location .location-heading {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1157,8 +1259,45 @@ a:hover {
   font-size: 13px;
 }
 
-.uc-claremont-neighbourhood .location-item {
+.uc-claremont-location .location-heading:before {
+  content: '';
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+  margin-left: -25px;
+  border-radius: 5px;
+}
+.uc-claremont-location .location-heading--schools{
+  color: #F08B82;
+}
+.uc-claremont-location .location-heading--schools:before {
+  background: #F08B82;
+  box-shadow: 0 0 8px 0 rgba(216, 103, 79, 0.65);
+}
+.uc-claremont-location .location-heading--aminities{
+  color: #A7664B;
+}
+.uc-claremont-location .location-heading--aminities:before {
+  background: #A7664B;
+  box-shadow: 0 0 8px 0 rgba(216, 103, 79, 0.65);
+}
+.uc-claremont-location .location-heading--parks{
+  color: #D8674F;
+}
+.uc-claremont-location .location-heading--parks:before {
+  background: #D8674F;
+  box-shadow: 0 0 8px 0 rgba(216, 103, 79, 0.65);
+}
+.uc-claremont-location .location-heading--restaurents{
+  color: #CD8A58;
+}
+.uc-claremont-location .location-heading--restaurents:before {
+  background: #CD8A58;
+  box-shadow: 0 0 8px 0 rgba(216, 103, 79, 0.65);
+}
+
+.uc-claremont-location .location-item {
   font-size: 80%;
   margin-bottom: 3px;
-  color: #c9c3ba;
+  color: #504B4B;
 }

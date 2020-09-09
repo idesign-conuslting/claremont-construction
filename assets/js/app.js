@@ -1,6 +1,6 @@
 /*       Sidebar Menu
 -------------------------*/
-function openNav() {
+function openNav(el) {
   var menu = document.querySelector(".sidebar");
   var btnMenu = document.querySelector(".openbtn");
   var x = document.querySelector(".sidebar__menu");
@@ -13,6 +13,12 @@ function openNav() {
     x.style.display = "none";
     menu.classList.remove("open-menu");
     _body.classList.remove("menu-opened");
+  }
+  var el_id= el.getAttribute("data-id");
+  if(el_id){
+    $("html, body").animate({
+      scrollTop: $(el_id).position().top,
+    });
   }
 }
 
@@ -62,33 +68,50 @@ var app = {
   singleGallerySlider: function () {
     if ($("#uc-claremont-slider").length > 0) {
       var sliderGallery = $("#uc-claremont-slider");
-      if($(window).width() > 767){
+      // if($(window).width() > 767){
+      //   sliderGallery.slick({
+      //     dots: false,
+      //     arrows: true,
+      //     infinite: false,
+      //     speed: 300,
+      //     slidesPerRow: 2,
+      //     rows: 2,
+      //     prevArrow:
+      //       '<button class="slick-prev slick-arrow" aria-label="Previous" type="button"><img src="assets/img/previous_button.png" alt=""/></button>',
+      //     nextArrow:
+      //       '<button class="slick-next slick-arrow" aria-label="Next" type="button"><img src="assets/img/next_button.png" alt=""/></button>',
+      //   });
+      // }else{
         sliderGallery.slick({
           dots: false,
           arrows: true,
           infinite: false,
           speed: 300,
-          slidesPerRow: 2,
-          rows: 2,
+          slidesToShow: 1,
+          centerMode: true,
+          centerPadding: '120px',
           prevArrow:
-            '<button class="slick-prev slick-arrow" aria-label="Previous" type="button"><img src="assets/img/previous_button.png" alt=""/></button>',
+            '<button class="slick-prev slick-arrow" aria-label="Previous" type="button"><img src="assets/img/previous_button.svg" alt=""/></button>',
           nextArrow:
-            '<button class="slick-next slick-arrow" aria-label="Next" type="button"><img src="assets/img/next_button.png" alt=""/></button>',
+            '<button class="slick-next slick-arrow" aria-label="Next" type="button"><img src="assets/img/next_button.svg" alt=""/></button>',
+          responsive: [
+            {
+              breakpoint: 992,
+              settings: {
+                centerMode: true,
+                centerPadding: '80px',
+              },
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                centerMode: false,
+                centerPadding: '0px',
+              },
+            },
+          ],
         });
-      }else{
-        sliderGallery.slick({
-          dots: false,
-          arrows: true,
-          infinite: false,
-          speed: 300,
-          slidesPerRow: 1,
-          rows: 1,
-          prevArrow:
-            '<button class="slick-prev slick-arrow" aria-label="Previous" type="button"><img src="assets/img/previous_button.png" alt=""/></button>',
-          nextArrow:
-            '<button class="slick-next slick-arrow" aria-label="Next" type="button"><img src="assets/img/next_button.png" alt=""/></button>',
-        });
-      }
+      // }
     }
   },
 };
