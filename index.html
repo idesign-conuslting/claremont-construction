@@ -28,7 +28,7 @@
       var que = document.getElementById("txt-address").value
 
       if (fname == 0 || lname == 0 || eml == 0 || que == 0){
-          alert("Please enter all the required fields")
+          alert("Please enter all the required fields with *")
           return
       }
 
@@ -256,22 +256,22 @@
           <div class="row">
             <div class="col-lg-6">
               <div class="form-group">
-                <input type="text" class="form-control" id="txt-fname" placeholder="your name" autocomplete="off" required/>
+                <input type="text" class="form-control" id="txt-fname" placeholder="your name *" autocomplete="off" required/>
               </div>
             </div>
             <div class="col-lg-6">
               <div class="form-group">
-                <input type="tel" class="form-control" id="txt-lname" placeholder="phone number" autocomplete="off" required/>
+                <input type="tel" class="form-control" id="txt-lname" placeholder="phone number *" autocomplete="off" required/>
               </div>
             </div>
             <div class="col-lg-12">
               <div class="form-group">
-                <input type="email" class="form-control" id="txt-email" placeholder="your e-mail" autocomplete="off" required/>
+                <input type="email" class="form-control" id="txt-email" placeholder="your e-mail *" autocomplete="off" required/>
               </div>
             </div>
             <div class="col-lg-12">
               <div class="form-group">
-                <textarea rows="7" class="form-control" id="txt-address" placeholder="how can we help you"
+                <textarea rows="7" class="form-control" id="txt-address" placeholder="how can we help you *"
                   autocomplete="off" required></textarea>
               </div>
             </div>
