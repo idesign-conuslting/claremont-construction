@@ -15,7 +15,7 @@ Version: 1.0
 }
 
 body {
-  background-image: url(../img/fullpage_background.jpg) ;
+  background-image: url(../img/gallery/marble.jpg) ;
   font-family: 'bigcity-grotesque-pro', Sans Serif;
   color: #504B4B;
   background-color: #E0E1E5;
@@ -260,13 +260,14 @@ a:hover {
   position: fixed;
   top: 30px;
   right: 20px;
-  z-index: 9;
+  z-index: 10;
 }
 
 @media screen and (max-width: 767px) {
   .btn-register--fixed {
     top: 100px;
     right: 20px;
+    z-index: 10;
   }
 }
 
@@ -785,7 +786,7 @@ a:hover {
 }
 
 .uc-claremont-box__inner p {
-  font-size: 90%;
+  font-size: 100%;
   line-height: 20px;
   color: #d7a755;
 }
@@ -936,7 +937,7 @@ a:hover {
 
 @media screen and (max-width: 575px) {
   .uc-claremont-register__title h3 {
-      font-size: 90%;
+      font-size: 100%;
       margin-top: 0px;
       margin-bottom: 20px;
       letter-spacing: 1px;
