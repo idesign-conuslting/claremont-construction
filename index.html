@@ -17,6 +17,46 @@
   <!-- build:css -->
   <link rel="stylesheet" href="https://use.typekit.net/key1fjp.css" />
   <link rel="stylesheet" href="assets/css/app.css" />
+  <script src= 
+    "https://smtpjs.com/v3/smtp.js"> 
+  </script> 
+  <script type="text/javascript"> 
+    function sendEmail() { 
+      var fname = document.getElementById("txt-fname").value
+      var lname = document.getElementById("txt-lname").value
+      var eml = document.getElementById("txt-email").value
+      var que = document.getElementById("txt-address").value
+
+      if (fname == 0 || lname == 0 || eml == 0 || que == 0){
+          alert("Please enter all the required fields")
+          return
+      }
+
+      var msg = "Customer email address is: " + eml + " ,Customer Name is: "+ fname + " ,Customer phomenumber is: " + lname + " ,Customer question is: "+  que
+      console.log(msg)
+      Email.send({ 
+        Host: "in-v3.mailjet.com", 
+        Username: "61ef71d8537dbd696509111aeb45b719", 
+        Password: "9ee39573ddb3e142d09ed79f7292244b",
+        To: 'sales@claremontliving.com', 
+        From: "claremeontliving@gmail.com", 
+        Subject: "Cutomer Inquiry: Claremont Living", 
+        Body: msg, 
+      }).then(function (message) {  
+        alert("Registered Successfully")
+        Email.send({ 
+              Host: "in-v3.mailjet.com", 
+              Username: "61ef71d8537dbd696509111aeb45b719", 
+              Password: "9ee39573ddb3e142d09ed79f7292244b", 
+              To: eml, 
+              From: "claremeontliving@gmail.com", 
+              Subject: "Claremont Living", 
+              Body: "Thank you for regestering with us. Will get back to you soon.", 
+            }).then(function (message) {
+              });
+        });
+    } 
+  </script> 
   <!-- endbuild -->
 </head>
 
@@ -212,33 +252,31 @@
         <div class="h1 text-center uc-claremont-register__title text-primary text-uppercase">
           <h3>Register</h3>
         </div>
-        <form action="#" method="post" autocomplete="off">
+        <div method="post" autocomplete="off">
           <div class="row">
             <div class="col-lg-6">
               <div class="form-group">
-                <input type="text" class="form-control" id="txt-fname" placeholder="your name" autocomplete="off" />
+                <input type="text" class="form-control" id="txt-fname" placeholder="your name" autocomplete="off" required/>
               </div>
             </div>
             <div class="col-lg-6">
               <div class="form-group">
-                <input type="tel" class="form-control" id="txt-lname" placeholder="phone number" autocomplete="off" />
+                <input type="tel" class="form-control" id="txt-lname" placeholder="phone number" autocomplete="off" required/>
               </div>
             </div>
             <div class="col-lg-12">
               <div class="form-group">
-                <input type="email" class="form-control" id="txt-email" placeholder="your e-mail" autocomplete="off" />
+                <input type="email" class="form-control" id="txt-email" placeholder="your e-mail" autocomplete="off" required/>
               </div>
             </div>
             <div class="col-lg-12">
               <div class="form-group">
                 <textarea rows="7" class="form-control" id="txt-address" placeholder="how can we help you"
-                  autocomplete="off"></textarea>
+                  autocomplete="off" required></textarea>
               </div>
             </div>
             <div class="col-lg-12 text-center">
-              <button type="submit" class="btn text-uppercase btn-register">
-                Submit
-              </button>
+              <input type="submit" class="btn text-uppercase btn-register" onclick="sendEmail()"/>
             </div>
           </div>
         </form>
