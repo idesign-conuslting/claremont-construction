@@ -261,6 +261,7 @@ a:hover {
   top: 30px;
   right: 20px;
   z-index: 10;
+  padding: 10px 10px 10px 10px;
 }
 
 @media screen and (max-width: 767px) {
@@ -268,6 +269,7 @@ a:hover {
     top: 100px;
     right: 20px;
     z-index: 10;
+    padding: 10px 10px 10px 10px;
   }
 }
 
@@ -431,7 +433,7 @@ a:hover {
   height: 100%;
   width: 0px;
   position: fixed;
-  z-index: 10;
+  z-index: 11;
   top: 0;
   left: 0;
   background-color: #D7A755;
@@ -997,6 +999,8 @@ a:hover {
   /* max-width: 1000px; */
   margin-left: auto;
   margin-right: auto;
+  width:80%;
+  height:100%;
 }
 
 .gallery-slider .slide-item {
@@ -1062,7 +1066,7 @@ a:hover {
 }
 
 .gallery-slider .slick-arrow.slick-prev {
-  bottom: 125px;
+  bottom: 15px;
 }
 
 /* @media screen and (max-width: 991px) { */
@@ -1073,14 +1077,14 @@ a:hover {
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
     margin-left: 60px;
-    margin-top: 50px;
+    margin-top: 10px;
   }
   .gallery-slider .slick-arrow.slick-prev {
     bottom: auto;
     top: 100%;
     left: 50%;
     margin-left: -30px;
-    margin-top: 50px;
+    margin-top: 10px;
   }
 /* } */
 
@@ -1140,6 +1144,7 @@ a:hover {
 -----------------------------------------*/
 .uc-claremont-location {
   position: relative;
+  width: 100%;
 }
 
 /* .uc-claremont-location__inner {
