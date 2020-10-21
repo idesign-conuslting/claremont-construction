@@ -1262,7 +1262,7 @@ a:hover {
   color: #c9c3ba;
   font-family: Georgia, "Sans Serif";
   margin-bottom: 15px;
-  font-size: 13px;
+  font-size: 20px;
 }
 
 .uc-claremont-location .location-heading:before {
@@ -1303,7 +1303,7 @@ a:hover {
 }
 
 .uc-claremont-location .location-item {
-  font-size: 80%;
+  font-size: 100%;
   margin-bottom: 3px;
   color: #504B4B;
 }
