@@ -471,7 +471,7 @@ a:hover {
   text-decoration: none;
   font-size: 1.2rem;
   letter-spacing: 1px;
-  text-transform: lowercase;
+  text-transform: uppercase;
   color: #504B4B;
   display: block;
   -webkit-transition: all 0.3s ease;
