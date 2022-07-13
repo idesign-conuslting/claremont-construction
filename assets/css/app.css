@@ -476,7 +476,6 @@ a:hover {
   display: block;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  font-style: italic;
 }
 
 .sidebar a:not(.scroll-top):hover, .sidebar a:not(.scroll-top).active {
