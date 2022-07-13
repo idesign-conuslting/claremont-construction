@@ -252,25 +252,51 @@
           <div class="row">
             <div class="col-lg-6">
               <div class="form-group">
-                <input type="text" class="form-control" id="txt-fname" placeholder="your name *" autocomplete="off" required/>
+                <input type="text" class="form-control" id="txt-fname" placeholder="first name *" autocomplete="off" required/>
               </div>
             </div>
             <div class="col-lg-6">
               <div class="form-group">
-                <input type="tel" class="form-control" id="txt-lname" placeholder="phone number *" autocomplete="off" required/>
+                <input type="text" class="form-control" id="txt-lname" placeholder="last name *" autocomplete="off" required/>
               </div>
             </div>
-            <div class="col-lg-12">
+             <div class="col-lg-6">
               <div class="form-group">
                 <input type="email" class="form-control" id="txt-email" placeholder="your e-mail *" autocomplete="off" required/>
               </div>
             </div>
-            <div class="col-lg-12">
+            <div class="col-lg-6">
               <div class="form-group">
-                <textarea rows="7" class="form-control" id="txt-address" placeholder="how can we help you *"
-                  autocomplete="off" required></textarea>
+                <input type="tel" class="form-control" id="txt-num" placeholder="phone number *" autocomplete="off" required/>
               </div>
             </div>
+             <div class="col-lg-6">
+              <div class="form-group">
+                <input type="text" class="form-control" id="txt-postal" placeholder="postal code *" autocomplete="off" required/>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="form-group">
+                <input type="text" class="form-control" id="txt-how" placeholder="how did you hear about us? *" autocomplete="off" required/>
+              </div>
+            </div>
+             <div class="col-lg-6">
+              <div class="form-group">
+                <select class="form-control" id="txt-realtor1" placeholder="are you a realtor?" autocomplete="off"/>
+                   <option value="yes"/>
+                   <option value="no"/>
+                </select>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="form-group">
+                <select class="form-control" id="txt-realtor1" placeholder="are you working with a realtor?" autocomplete="off"/>
+                   <option value="yes"/>
+                   <option value="no"/>
+                </select>
+              </div>
+            </div>
+
             <div class="col-lg-12 text-center">
               <input type="submit" class="btn text-uppercase btn-register" onclick="sendEmail()"/>
             </div>
