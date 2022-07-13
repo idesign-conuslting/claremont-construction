@@ -18,27 +18,29 @@
   <link rel="stylesheet" href="https://use.typekit.net/key1fjp.css" />
   <link rel="stylesheet" href="assets/css/app.css" />
   <script src= 
-    "https://smtpjs.com/v3/smtp.js"> 
+    "https://github.com/infiniteloopltd/SMTPJS.com/blob/master/smtp.js"> 
   </script> 
+
   <script type="text/javascript"> 
     function sendEmail() { 
       var fname = document.getElementById("txt-fname").value
       var lname = document.getElementById("txt-lname").value
       var eml = document.getElementById("txt-email").value
-      var que = document.getElementById("txt-address").value
+      var num = document.getElementById("txt-num").value
+      var postal = document.getElementById("txt-postal").value
+      var how = document.getElementById("txt-how").value
 
-      if (fname == 0 || lname == 0 || eml == 0 || que == 0){
+      if (fname == 0 || lname == 0 || eml == 0 || num == 0 || postal == 0 || how == 0){
           alert("Please enter all the required fields with *")
           return
       }
 
-      var msg = "Customer email address is: " + eml + " ,Customer Name is: "+ fname + " ,Customer phomenumber is: " + lname + " ,Customer question is: "+  que
-      console.log(msg)
+      var msg = "Customer email address is: " + eml + " ,Customer Name is: "+ fname + " ,Customer lastname is: " + lname + " ,Customer phone is: "+  num + " ,Customer postal is: "+  postal + " ,How did you hear: "+  how
       Email.send({ 
         Host: "in-v3.mailjet.com", 
         Username: "61ef71d8537dbd696509111aeb45b719", 
         Password: "9ee39573ddb3e142d09ed79f7292244b",
-        To: 'sales@claremontliving.com', 
+        To: 'kaushalprajapati46@gmail.com', 
         From: "claremeontliving@gmail.com", 
         Subject: "Cutomer Inquiry: Claremont Living", 
         Body: msg, 
@@ -85,7 +87,6 @@
       <div class="sidebar__inner">
         <div class="sidebar__menu" style="display: none;">
           <a href="javascript:void(0);" data-id="#main" onclick="openNav(this)">Home</a>
-          <a href="javascript:void(0);" data-id="#uc-claremont-gallery" onclick="openNav(this)">Gallery</a>
           <a href="javascript:void(0);" data-id="#uc-claremont-neighbours" onclick="openNav(this)">Neighbourhood</a>
           <a href="javascript:void(0);" data-id="#uc-claremont-location" onclick="openNav(this)">Location Map</a>
           <a href="javascript:void(0);" data-id="#uc-claremont-register" onclick="openNav(this)">Register</a>
@@ -282,21 +283,34 @@
             </div>
              <div class="col-lg-6">
               <div class="form-group">
-                <select class="form-control" id="txt-realtor1" placeholder="are you a realtor?" autocomplete="off"/>
-                   <option value="yes"/>
-                   <option value="no"/>
+                <select class="form-control" id="txt-realtor1" name="realtor1">
+                   <option value="" disabled selected>are you a realtor?</option>
+                   <option value="yes">yes</option>
+                   <option value="no">no</option>
                 </select>
               </div>
             </div>
             <div class="col-lg-6">
               <div class="form-group">
-                <select class="form-control" id="txt-realtor1" placeholder="are you working with a realtor?" autocomplete="off"/>
-                   <option value="yes"/>
-                   <option value="no"/>
+                <select class="form-control" id="txt-realtor2" name="realtor2">
+                   <option value="" disabled selected>are you working with a realtor?</option>
+                   <option value="yes">yes</option>
+                   <option value="no">no</option>
                 </select>
               </div>
             </div>
-
+            <div class="col-lg-12">
+              <div>
+                <input  style="accent-color: #D7A755;" type="checkbox" id="consent" name="consent" value="checked" checked>
+                <label for="consent" class="footer__desc font-title footer__title" style="font-size: 10px;"> By checking this box I consent to Vision L Developments and their a-liates & agents sending me electronic messages. I understand that I can unsubscribe at any time.</label>
+                <label for="consent" class="footer__desc font-title footer__title" style="font-size: 10px; margin-left: 24px; display: block; margin-top: 10px;"> By registering, you consent to receiving information about this and other projects that may be of interest. Should you wish to be excluded, please email us or click the
+                  appropriate link at the bottom of any email received.</label>
+                  <label for="consent" class="footer__desc font-title footer__title" style="font-size: 10px;margin-left: 24px; display: block; margin-top: 5px;"> By opting-in you consent to Vision L Developments and its current and future a-liates, partners and subsidiaries (the Vision L Developments) contacting you regarding
+                    their current and future products and services, newsletters, announcements, promotions, incentives and other publications, and you consent to the collection, use
+                    and disclosure of the personal information you have provided, by or on behalf of the members of the Vision L Developments for these marketing purposes, in accordance
+                    with Vision L Developments’ Privacy Policy. You may withdraw your consent at any time by unsubscribing from our email correspondence.</label>
+              </div>
+            </div>
             <div class="col-lg-12 text-center">
               <input type="submit" class="btn text-uppercase btn-register" onclick="sendEmail()"/>
             </div>
@@ -314,7 +328,6 @@
   <footer class="footer uc-claremont-bg">
     <div class="footer__menu">
       <a href="javascript:void(0);" data-target="main" class="font-title text-uppercase">Home</a>
-      <a href="javascript:void(0);" data-target="uc-claremont-gallery" class="font-title text-uppercase">Gallery</a>
       <a href="javascript:void(0);" data-target="uc-claremont-neighbours" class="font-title text-uppercase">Neighbourhood</a>
       <a href="javascript:void(0);" data-target="uc-claremont-location" class="font-title text-uppercase">Location Map</a>
       <a href="javascript:void(0);" data-target="uc-claremont-register" class="font-title text-uppercase">Register</a>
@@ -326,7 +339,7 @@
       </div>
       <hr />
       <div>
-        <a href="tel:778.863.4589">778.863.4589</a>
+        <a href="tel:778.863.4589">604.803.6999</a>
         <a href="mailto:sales@claremontliving.com">sales@claremontliving.com</a>
       </div>
     </div>
